@@ -1,6 +1,6 @@
 package org.xjh.testtool;
 
-import android.content.Context;
+import android.app.Application;
 
 import org.xjh.testtool.handler.CrashHandler;
 
@@ -12,9 +12,9 @@ public class TestTool {
 
     /**
      * 测试工具初始化
-     * @param context
+     * @param application
      */
-    public static void init(Context context) {
-        CrashHandler.getInstance().init(context);
+    public static void install(Application application) {
+        CrashHandler.getInstance().init(application);
     }
 }
